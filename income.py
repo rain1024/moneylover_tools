@@ -37,7 +37,8 @@ def load_default_categories():
 parent_child_categories, parent_categories = load_default_categories()
 print("Hello Vu Anh ^-^")
 print("\nGenerate Personal Financial Report")
-df = pd.read_csv("data/MoneyLover-2020-02-18.csv", sep=";")
+data_file = "data/Money Lover - export.csv"
+df = pd.read_csv(data_file, sep=";")
 check_categories(df)
 df["day"] = df.apply(lambda item: item['Date'][:2], axis=1)
 df["month"] = df.apply(lambda item: item['Date'][3:5], axis=1)
